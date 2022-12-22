@@ -1,0 +1,15 @@
+{{ define "page_menu" }}
+
+	<div class="page-menu">
+		<nav>
+			<ul>
+				{{ range $itemIndex, $itemValue := . }}
+					<li>
+						<a href="{{ $itemValue.Href }}">{{ $itemValue.Name }}</a>
+					</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</div>
+
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "breadcrumbs" }}
+
+	<div class="breadcrumbs">
+		<nav>
+			<ul>
+				{{ range $itemIndex, $itemValue := . }}
+					<li>
+						<a href="{{ $itemValue.Href }}">{{ $itemValue.Name }}</a>
+					</li>
+				{{ end }}
+			</ul>
+		</nav>
+	</div>
+
+{{ end }}

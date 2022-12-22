@@ -1,0 +1,69 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #474e5d;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container-sign-up {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 80%;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	display: inline-block;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+button {
+	background-color: #04AA6D;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+.cancel-button {
+	padding: 14px 20px;
+	background-color: #f44336;
+}
+
+.cancel-button, .sign-up-button {
+	float: left;
+	width: 50%;
+}
+
+.container-sign-up {
+	padding: 16px;
+}
+
+.button-group::after {
+	content: "";
+	clear: both;
+	display: table;
+}

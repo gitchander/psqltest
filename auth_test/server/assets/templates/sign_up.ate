@@ -1,0 +1,35 @@
+{{ define "content" }}
+
+	{{ template "breadcrumbs" .breadcrumbs }}
+
+	<form method="post">
+		<div class="container-sign-up">
+			<h1>Sign Up</h1>
+			<p>Please fill in this form to create an account.</p>
+
+			<hr>
+
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+			<label for="username_id"><b>Username</b></label>
+			<input type="text" id="username_id" name="username" placeholder="Enter Username" required>
+
+			<label for="password_id"><b>Enter Password</b></label>
+			<input type="password" id="password_id" name="password" placeholder="Enter Password" required>
+
+			<label for="password_confirm_id"><b>Confirm password</b></label>
+			<input type="password" id="password_confirm_id" name="password_confirm" placeholder="Confirm password" required>
+
+			<label>
+				<input type="checkbox" checked="checked" name="remember">Remember me
+			</label>
+
+			<div class="button-group">
+				<button type="button" class="cancel-button">Cancel</button>
+				<button type="submit" class="sign-up-button">Sign Up</button>
+			</div>
+		</div>
+	</form>
+
+{{ end }}

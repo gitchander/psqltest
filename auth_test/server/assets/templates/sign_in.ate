@@ -1,0 +1,16 @@
+{{ define "sign_in" }}
+
+	<form method="post">
+		<div class="sign_in_image">
+			<img src="assets/images/user-login-305.png" class="avatar">
+		</div>
+
+		<div>
+			<label for="username">
+				<b>Username</b>
+			</label>
+			<input type="text" placeholder="Enter Username" name="username" required >
+		</div>
+	</form>
+
+{{ end }}

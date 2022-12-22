@@ -1,0 +1,10 @@
+{{ define "content" }}
+
+	{{ if .hasTitle }}
+		{{ template "breadcrumbs" .breadcrumbs }}
+		{{ template "content_header" .contentHeader }}
+	{{ end }}
+
+	{{ template "page_menu" .pageMenu }}
+
+{{ end }}

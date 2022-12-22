@@ -1,0 +1,116 @@
+https://www.postgresql.org
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgresql-on-ubuntu-18-04-ru
+
+Вхід під обліковим записом postgres за командою:
+$ sudo -i -u postgres
+
+Вхід у командну оболонку Postgres:
+$ psql
+
+$ psql <dbname>
+$ psql testdb
+
+Вихід з командної оболонки Postgres:
+# \q
+
+List of roles (Список ролей (користувачів)):
+# \du
+
+List of databases (Список баз даних):
+# \l
+
+List of relations
+# \dt
+
+# CREATE DATABASE testdb;
+
+# CREATE USER robinson WITH PASSWORD '********';
+
+//------------------------------------------------------------------------------
+Створюємо користувача robinson у операційній системі Ubuntu:
+$ sudo adduser robinson
+
+username: robinson
+password: ********
+
+//------------------------------------------------------------------------------
+// adduser
+//------------------------------------------------------------------------------
+
+$ sudo adduser <username>
+$ sudo adduser --no-create-home <username>
+
+$ sudo adduser robinson
+password: ********
+
+$ sudo adduser friday
+$ sudo adduser --no-create-home friday
+
+password: ********
+
+$ sudo -u friday psql
+
+!!!
+Від користувача robinson запустити psql з таблицею testdb:
+$ sudo -u robinson psql testdb
+!!!
+
+Вивести список користувачів:
+$ cat /etc/passwd
+or
+$ less /etc/passwd
+
+//------------------------------------------------------------------------------
+// deluser
+//------------------------------------------------------------------------------
+$ man deluser
+
+Видалення користувача у терміналі:
+$ sudo deluser <username>
+
+$ sudo deluser --remove-home <username>
+
+Справка по команді userdel:
+$ man userdel
+
+//------------------------------------------------------------------------------
+
+CREATE TABLE tasks (
+	task_id serial PRIMARY KEY,
+	task_alias VARCHAR(50) NOT NULL,
+	timestamp TIMESTAMP NOT NULL,
+	groups VARCHAR(256) NOT NULL
+);
+
+$ go get github.com/lib/pq
+
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
+2022.11.18
+
+$ sudo -i -u postgres
+
+$ psql
+
+postgres=# CREATE USER robinson WITH PASSWORD '*********';
+postgres=# ALTER ROLE robinson createrole createdb;
+postgres=# \du
+postgres=# \q
+
+# Вийти з користувача postgres:
+$ exit
+
+# Віддалено підключитися користувачем robinson до бази даних postgres:
+$ psql -U robinson -d postgres -h localhost -W
+
+postgres=> CREATE DATABASE testdb;
+postgres=> \l
+postgres=> \q
+
+# Віддалено підключитися користувачем robinson до бази даних testdb:
+$ psql -U robinson -d testdb -h localhost -W
+
+testdb=>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "UTF-8" />
+		<title>{{ .Title }}</title>
+		{{ range $itemIndex, $itemValue := .styles  }}
+			<link rel="stylesheet" href="{{ $itemValue }}">
+		{{ end }}
+	</head>
+	<body>
+		<div class="container">
+			{{ template "content" . }}
+		</div>
+	</body>
+</html>
